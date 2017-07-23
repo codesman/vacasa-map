@@ -9,21 +9,30 @@
         <title>{{ env('APP_NAME') }}</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
         <link href="css/app.css" rel="stylesheet" type="text/css">
         
         <style>
             body {
                 font-family: "Source Sans Pro", sans-serif;
             }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
         </style>
     </head>
     <body>
-        <div id="app" class="flex-center position-ref full-height">
-            <section class="map-locations">
-                <map-header></map-header>
-                <map-nav></map-nav>
-                <location-map></location-map>
+        <div id="app" class="position-ref full-height">
+            <section class="map-locations flex-center">
+                <div>
+                    <map-header></map-header>
+                    <map-nav></map-nav>
+                    <location-map></location-map>
+                </div>
+                
             </section>
         </div>
     <script src="js/app.js"></script>

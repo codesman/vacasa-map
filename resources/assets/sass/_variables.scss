@@ -2,6 +2,9 @@
 // Body
 $body-bg: #FFF;
 
+// Map Locations
+$map-locations-background: #efeeee;
+
 // Borders
 $laravel-border-color: darken($body-bg, 10%);
 $list-group-border: $laravel-border-color;
@@ -21,7 +24,7 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 $font-family-sans-serif: "Source Sans Pro", sans-serif;
 $font-size-base: 14px;
 $line-height-base: 1.6;
-$text-color: #636b6f;
+$text-color: #373737;
 
 // Navbar
 $navbar-default-bg: #fff;
