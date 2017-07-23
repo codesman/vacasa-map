@@ -12,6 +12,9 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+            <section class="map-locations">
+                
+            </section>
         </div>
     </body>
 </html>
