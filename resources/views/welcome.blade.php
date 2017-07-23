@@ -11,10 +11,13 @@
         <link href="css/app.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div id="app" class="flex-center position-ref full-height">
             <section class="map-locations">
-                
+                <map-header></map-header>
+                <map-nav></map-nav>
+                <location-map></location-map>
             </section>
         </div>
+    <script src="js/app.js"></script>
     </body>
 </html>
