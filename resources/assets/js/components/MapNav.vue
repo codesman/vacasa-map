@@ -1,7 +1,8 @@
 <template>
     <nav>
         <ul>
-            <li v-for="country in countries"><a href="" @click.prevent="loadMap(country.ref)">{{ country.name }}</a></li>
+            <li v-for="country in countries"><a href="" @click.prevent="loadMap(country.ref)">{{ country.name }}</a>
+            </li>
         </ul>
     </nav>
 </template>
@@ -11,20 +12,23 @@
     export default{
         data(){
             return{
-                countries: [
-                    {name: 'United States', ref: 'united-states'},
-                    {name: 'Europe', ref: 'europe'},
-                    {name: 'South America', ref: 'south-america'},
-                    {name: 'Central America', ref: 'central-america'},
-                    {name: 'Caribbean', ref: 'caribbean'},
-                    {name: 'Africa', ref: 'africa'},
-                ]
+                countries: []
             }
         },
         methods: {
             loadMap: function(map){
                 console.log(map)
             }
+        },
+        mounted: function(){
+            let vm = this
+            axios.get('/countries')
+              .then(function (response) {
+                vm.countries = response.data
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
         }
     }
 </script>
