@@ -1,47 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
 
-/* FONTS */
-
-@font-face {
-  font-family: 'ssp';
-  src: url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-regular.eot");
-  src: url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-regular.eot?#iefix") format("embedded-opentype"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-regular.woff") format("woff"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-regular.ttf") format("truetype"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-regular.svg#ssp-regular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ssp';
-  src: url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-italic.eot");
-  src: url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-italic.eot?#iefix") format("embedded-opentype"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-italic.woff") format("woff"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-italic.ttf") format("truetype"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-italic.svg#ssp-italic") format("svg");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'ssp';
-  src: url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-semibold.eot");
-  src: url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-semibold.eot?#iefix") format("embedded-opentype"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-semibold.woff") format("woff"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-semibold.ttf") format("truetype"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-semibold.svg#ssp-semibold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ssp';
-  src: url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-light-italic.eot");
-  src: url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-light-italic.eot?#iefix") format("embedded-opentype"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-light-italic.woff") format("woff"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-light-italic.ttf") format("truetype"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-light-italic.svg#ssp-light-italic") format("svg");
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'ssp';
-  src: url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-light.eot");
-  src: url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-light.eot?#iefix") format("embedded-opentype"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-light.woff") format("woff"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-light.ttf") format("truetype"), url("https://d33zkqzv7i9ae0.cloudfront.net/fonts/ssp-light.svg#ssp-light") format("svg");
-  font-weight: 300;
-  font-style: normal;
-}
-
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -1444,11 +1402,11 @@ html {
 }
 
 body {
-  font-family: "ssp", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 14px;
   line-height: 1.6;
   color: #636b6f;
-  background-color: #f5f8fa;
+  background-color: #FFF;
 }
 
 input,
@@ -1497,7 +1455,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.6;
-  background-color: #f5f8fa;
+  background-color: #FFF;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -3096,7 +3054,7 @@ th {
 }
 
 .table .table {
-  background-color: #f5f8fa;
+  background-color: #FFF;
 }
 
 .table-condensed > thead > tr > th,
@@ -5187,7 +5145,7 @@ tbody.collapse.in {
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: #f5f8fa;
+  background-color: #FFF;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -5288,7 +5246,7 @@ tbody.collapse.in {
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #f5f8fa;
+    border-bottom-color: #FFF;
   }
 }
 
@@ -5731,7 +5689,7 @@ tbody.collapse.in {
 
 .navbar-default {
   background-color: #fff;
-  border-color: #d3e0e9;
+  border-color: #e6e5e5;
 }
 
 .navbar-default .navbar-brand {
@@ -5787,7 +5745,7 @@ tbody.collapse.in {
 
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #d3e0e9;
+  border-color: #e6e5e5;
 }
 
 .navbar-default .navbar-nav > .open > a,
@@ -6356,7 +6314,7 @@ a.badge:focus {
   padding: 4px;
   margin-bottom: 22px;
   line-height: 1.6;
-  background-color: #f5f8fa;
+  background-color: #FFF;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
@@ -6638,7 +6596,7 @@ a.thumbnail.active {
   padding: 10px 15px;
   margin-bottom: -1px;
   background-color: #fff;
-  border: 1px solid #d3e0e9;
+  border: 1px solid #e6e5e5;
 }
 
 .list-group-item:first-child {
@@ -6921,7 +6879,7 @@ button.list-group-item-danger.active:focus {
 .panel-footer {
   padding: 10px 15px;
   background-color: #f5f5f5;
-  border-top: 1px solid #d3e0e9;
+  border-top: 1px solid #e6e5e5;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
 }
@@ -7142,7 +7100,7 @@ button.list-group-item-danger.active:focus {
 
 .panel-group .panel-heading + .panel-collapse > .panel-body,
 .panel-group .panel-heading + .panel-collapse > .list-group {
-  border-top: 1px solid #d3e0e9;
+  border-top: 1px solid #e6e5e5;
 }
 
 .panel-group .panel-footer {
@@ -7150,21 +7108,21 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel-group .panel-footer + .panel-collapse .panel-body {
-  border-bottom: 1px solid #d3e0e9;
+  border-bottom: 1px solid #e6e5e5;
 }
 
 .panel-default {
-  border-color: #d3e0e9;
+  border-color: #e6e5e5;
 }
 
 .panel-default > .panel-heading {
   color: #333333;
   background-color: #fff;
-  border-color: #d3e0e9;
+  border-color: #e6e5e5;
 }
 
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #d3e0e9;
+  border-top-color: #e6e5e5;
 }
 
 .panel-default > .panel-heading .badge {
@@ -7173,7 +7131,7 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel-default > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #d3e0e9;
+  border-bottom-color: #e6e5e5;
 }
 
 .panel-primary {
@@ -7541,7 +7499,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "ssp", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -7675,7 +7633,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "ssp", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;

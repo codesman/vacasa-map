@@ -9,7 +9,14 @@
         <title>{{ env('APP_NAME') }}</title>
 
         <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
         <link href="css/app.css" rel="stylesheet" type="text/css">
+        
+        <style>
+            body {
+                font-family: "Source Sans Pro", sans-serif;
+            }
+        </style>
     </head>
     <body>
         <div id="app" class="flex-center position-ref full-height">
