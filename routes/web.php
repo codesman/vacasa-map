@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Country Data
+Route::get('/countries', 'CountriesController@index');
