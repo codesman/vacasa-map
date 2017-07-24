@@ -32,7 +32,6 @@
                     <map-nav></map-nav>
                     <location-map></location-map>
                 </div>
-                
             </section>
         </div>
     <script src="js/app.js"></script>

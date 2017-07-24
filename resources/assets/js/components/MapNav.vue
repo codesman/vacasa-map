@@ -17,18 +17,21 @@
         },
         methods: {
             loadMap: function(map){
-                console.log(map)
+                Event.$emit('load-map', map)
+            },
+            loadCountries: function(){
+                let vm = this
+                axios.get('/countries')
+                  .then(function (response) {
+                    vm.countries = response.data
+                  })
+                  .catch(function (error) {
+                    console.log(error);
+                  });
             }
         },
         mounted: function(){
-            let vm = this
-            axios.get('/countries')
-              .then(function (response) {
-                vm.countries = response.data
-              })
-              .catch(function (error) {
-                console.log(error);
-              });
+            this.loadCountries()
         }
     }
 </script>

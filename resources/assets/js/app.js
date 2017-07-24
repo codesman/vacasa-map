@@ -9,10 +9,15 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-Vue.component('map-nav', require('./components/MapNav.vue'));
-Vue.component('map-header', require('./components/MapHeader.vue'));
-Vue.component('location-map', require('./components/LocationMap.vue'));
+// Vue.component('map-nav', require('./components/MapNav.vue'));
+// Vue.component('map-header', require('./components/MapHeader.vue'));
+// Vue.component('location-map', require('./components/LocationMap.vue'));
 
+import MapNav from './components/MapNav.vue'
+import MapHeader from './components/MapHeader.vue'
+import LocationMap from './components/LocationMap.vue'
+
+Event = new Vue({});
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -20,5 +25,10 @@ Vue.component('location-map', require('./components/LocationMap.vue'));
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    components: {
+        'map-nav': MapNav,
+        'map-header': MapHeader,
+        'location-map': LocationMap,
+    }
 });

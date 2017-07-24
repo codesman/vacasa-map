@@ -1178,8 +1178,16 @@ module.exports = __webpack_require__(53);
 
 /***/ }),
 /* 12 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_MapNav_vue__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_MapNav_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_MapNav_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_MapHeader_vue__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_MapHeader_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_MapHeader_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_LocationMap_vue__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_LocationMap_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_LocationMap_vue__);
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -1191,10 +1199,15 @@ __webpack_require__(13);
 
 window.Vue = __webpack_require__(38);
 
-Vue.component('map-nav', __webpack_require__(39));
-Vue.component('map-header', __webpack_require__(45));
-Vue.component('location-map', __webpack_require__(48));
+// Vue.component('map-nav', require('./components/MapNav.vue'));
+// Vue.component('map-header', require('./components/MapHeader.vue'));
+// Vue.component('location-map', require('./components/LocationMap.vue'));
 
+
+
+
+
+Event = new Vue({});
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -1202,7 +1215,12 @@ Vue.component('location-map', __webpack_require__(48));
  */
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  components: {
+    'map-nav': __WEBPACK_IMPORTED_MODULE_0__components_MapNav_vue___default.a,
+    'map-header': __WEBPACK_IMPORTED_MODULE_1__components_MapHeader_vue___default.a,
+    'location-map': __WEBPACK_IMPORTED_MODULE_2__components_LocationMap_vue___default.a
+  }
 });
 
 /***/ }),
@@ -42328,16 +42346,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         loadMap: function loadMap(map) {
-            console.log(map);
+            Event.$emit('load-map', map);
+        },
+        loadCountries: function loadCountries() {
+            var vm = this;
+            axios.get('/countries').then(function (response) {
+                vm.countries = response.data;
+            }).catch(function (error) {
+                console.log(error);
+            });
         }
     },
     mounted: function mounted() {
-        var vm = this;
-        axios.get('/countries').then(function (response) {
-            vm.countries = response.data;
-        }).catch(function (error) {
-            console.log(error);
-        });
+        this.loadCountries();
     }
 });
 
@@ -42543,12 +42564,32 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            msg: 'hello vue'
+            mapData: ''
         };
+    },
+
+    mounted: function mounted() {
+        var vm = this;
+        vm.loadMap('united-states');
+
+        Event.$on('load-map', function (map) {
+            vm.loadMap(map);
+        });
+    },
+    created: function created() {},
+
+    methods: {
+        loadMap: function loadMap(map) {
+            var vm = this;
+            axios.get('/maps/' + map).then(function (response) {
+                vm.mapData = response.data;
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
     }
 });
 
@@ -42557,7 +42598,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('main')
+  return _c('main', {
+    staticClass: "location-map"
+  }, [_c('div', {
+    domProps: {
+      "innerHTML": _vm._s(_vm.mapData)
+    }
+  })])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
