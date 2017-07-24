@@ -10,6 +10,7 @@ class MapController extends Controller
     {
         $countries = [
             'united-states',
+            'europe',
             'south-america',
             'central-america',
             'caribbean',
