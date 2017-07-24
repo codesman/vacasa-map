@@ -2,24 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Country;
 use Illuminate\Http\Request;
 
 class MapController extends Controller
 {
-    public function show(string $country)
+    public function show(string $ref)
     {
-        $countries = [
-            'united-states',
-            'europe',
-            'south-america',
-            'central-america',
-            'caribbean',
-            'africa',
-        ];
+        $country = Country::where('ref', (string)$ref)->firstOrFail();
         
-        if (in_array($country, $countries)) {
-            return view("maps/$country");
-        } 
-        abort(404);
+        return view("maps/$country->ref");
     }
 }
