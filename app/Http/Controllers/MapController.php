@@ -9,7 +9,7 @@ class MapController extends Controller
 {
     public function show(string $ref)
     {
-        $country = Country::where('ref', (string)$ref)->firstOrFail();
+        $country = Country::ref($ref)->firstOrFail();
         
         return view("maps/$country->ref");
     }
