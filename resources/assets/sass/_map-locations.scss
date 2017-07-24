@@ -1,14 +1,29 @@
 $content-font-size: 17.5px;
 $vacasa-orange: #e49e01;
+$map-background: #cbebfa;
 
 .map-locations {
   background: $map-locations-background;
-  padding: 0 1em;
+  padding: 0 2em 4em;
   width: 100vw;
   
-  a:hover {
-    color: $vacasa-orange;
-    text-decoration: none;
+  a {
+    &:hover {
+      color: $vacasa-orange;
+    }
+
+    &:hover,
+    &:visited,
+    &:focus {
+      text-decoration: none;
+    }
+    &:active {
+      color: pink;
+    }
+  }
+  
+  > div:first-child {
+    width: 100%;
   }
   
   header {
@@ -30,6 +45,7 @@ $vacasa-orange: #e49e01;
     
     ul {
       display: flex;
+      justify-content: center;
 
       list-style: none;
       margin: 0;
@@ -41,5 +57,52 @@ $vacasa-orange: #e49e01;
         padding: 1em;
       }
     }
+  }
+  
+}
+
+.location-map {
+  border: solid 1em #fff;
+  width: 100%;
+  position: relative;
+  
+  a:hover path{
+      fill: $vacasa-orange;
+  }
+  
+  svg {
+    width: 100%;
+
+    display: block;
+    background: $map-background;
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+  }
+
+  path {
+    fill: #fff;
+    stroke: #B0D2DF;
+    stroke-width: 0.5;
+    stroke-opacity: 1;
+    transition: 0.2s fill, 0.2s stroke;
+  }
+  
+  a path {
+    fill: #538d9c;
+    stroke: #C2E8FB;
+  }
+
+  text, tspan {
+    font-weight: bolder;
+    font-size: 14px;
+    fill: #A2B7B8;
+    transition: 0.2s fill;
+    cursor: default;
+  }
+  
+  a text, a tspan {
+    fill: #ffffff;
+    cursor: pointer;
   }
 }

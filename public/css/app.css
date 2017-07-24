@@ -2,13 +2,26 @@
 
 .map-locations {
   background: #efeeee;
-  padding: 0 1em;
+  padding: 0 2em 4em;
   width: 100vw;
 }
 
 .map-locations a:hover {
   color: #e49e01;
+}
+
+.map-locations a:hover,
+.map-locations a:visited,
+.map-locations a:focus {
   text-decoration: none;
+}
+
+.map-locations a:active {
+  color: pink;
+}
+
+.map-locations > div:first-child {
+  width: 100%;
 }
 
 .map-locations header {
@@ -33,6 +46,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -42,6 +58,52 @@
   display: block;
   font-size: 17.5px;
   padding: 1em;
+}
+
+.location-map {
+  border: solid 1em #fff;
+  width: 100%;
+  position: relative;
+}
+
+.location-map a:hover path {
+  fill: #e49e01;
+}
+
+.location-map svg {
+  width: 100%;
+  display: block;
+  background: #cbebfa;
+}
+
+.location-map path {
+  fill: #fff;
+  stroke: #B0D2DF;
+  stroke-width: 0.5;
+  stroke-opacity: 1;
+  -webkit-transition: 0.2s fill, 0.2s stroke;
+  transition: 0.2s fill, 0.2s stroke;
+}
+
+.location-map a path {
+  fill: #538d9c;
+  stroke: #C2E8FB;
+}
+
+.location-map text,
+.location-map tspan {
+  font-weight: bolder;
+  font-size: 14px;
+  fill: #A2B7B8;
+  -webkit-transition: 0.2s fill;
+  transition: 0.2s fill;
+  cursor: default;
+}
+
+.location-map a text,
+.location-map a tspan {
+  fill: #ffffff;
+  cursor: pointer;
 }
 
 /*!
