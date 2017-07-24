@@ -1,12 +1,26 @@
 $content-font-size: 17.5px;
+
+$snow-white: #fff;
 $vacasa-orange: #e49e01;
+
 $map-background: #cbebfa;
+
+$map-path-stroke-color: #b0d2df;
+$map-path-stroke-width: .5;
+
+$text-fill-color: #a2b7b8;
+
+$a-path-fill-color: #538d9c;
+$a-path-stroke-color: #c2e8fb;
+
+$map-transition-time: .2s;
+
 
 .map-locations {
   background: $map-locations-background;
   padding: 0 2em 4em;
   width: 100vw;
-  
+
   a {
     &:hover {
       color: $vacasa-orange;
@@ -17,18 +31,15 @@ $map-background: #cbebfa;
     &:focus {
       text-decoration: none;
     }
-    &:active {
-      color: pink;
-    }
   }
-  
+
   > div:first-child {
     width: 100%;
   }
-  
+
   header {
     text-align: center;
-    
+
     h2 {
       font-size: 35px;
       font-weight: bold;
@@ -39,10 +50,10 @@ $map-background: #cbebfa;
       font-size: $content-font-size;
     }
   }
-  
+
   nav {
     margin-top: 2em;
-    
+
     ul {
       display: flex;
       justify-content: center;
@@ -58,18 +69,18 @@ $map-background: #cbebfa;
       }
     }
   }
-  
+
 }
 
 .location-map {
-  border: solid 1em #fff;
-  width: 100%;
+  border: solid 1em $snow-white;
   position: relative;
-  
-  a:hover path{
-      fill: $vacasa-orange;
+  width: 100%;
+
+  a:hover path {
+    fill: $vacasa-orange;
   }
-  
+
   svg {
     width: 100%;
 
@@ -81,28 +92,28 @@ $map-background: #cbebfa;
   }
 
   path {
-    fill: #fff;
-    stroke: #B0D2DF;
-    stroke-width: 0.5;
+    fill: $snow-white;
+    stroke: $map-path-stroke-color;
     stroke-opacity: 1;
-    transition: 0.2s fill, 0.2s stroke;
+    stroke-width: $map-path-stroke-width;
+    transition: $map-transition-time fill, $map-transition-time stroke;
   }
-  
+
   a path {
-    fill: #538d9c;
-    stroke: #C2E8FB;
+    fill: $a-path-fill-color;
+    stroke: $a-path-stroke-color;
   }
 
   text, tspan {
-    font-weight: bolder;
-    font-size: 14px;
-    fill: #A2B7B8;
-    transition: 0.2s fill;
     cursor: default;
+    fill: $text-fill-color;
+    font-size: 14px;
+    font-weight: bolder;
+    transition: $map-transition-time fill;
   }
-  
+
   a text, a tspan {
-    fill: #ffffff;
     cursor: pointer;
+    fill: $snow-white;
   }
 }

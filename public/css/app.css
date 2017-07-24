@@ -16,10 +16,6 @@
   text-decoration: none;
 }
 
-.map-locations a:active {
-  color: pink;
-}
-
 .map-locations > div:first-child {
   width: 100%;
 }
@@ -62,8 +58,8 @@
 
 .location-map {
   border: solid 1em #fff;
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 
 .location-map a:hover path {
@@ -78,32 +74,32 @@
 
 .location-map path {
   fill: #fff;
-  stroke: #B0D2DF;
-  stroke-width: 0.5;
+  stroke: #b0d2df;
   stroke-opacity: 1;
+  stroke-width: 0.5;
   -webkit-transition: 0.2s fill, 0.2s stroke;
   transition: 0.2s fill, 0.2s stroke;
 }
 
 .location-map a path {
   fill: #538d9c;
-  stroke: #C2E8FB;
+  stroke: #c2e8fb;
 }
 
 .location-map text,
 .location-map tspan {
-  font-weight: bolder;
+  cursor: default;
+  fill: #a2b7b8;
   font-size: 14px;
-  fill: #A2B7B8;
+  font-weight: bolder;
   -webkit-transition: 0.2s fill;
   transition: 0.2s fill;
-  cursor: default;
 }
 
 .location-map a text,
 .location-map a tspan {
-  fill: #ffffff;
   cursor: pointer;
+  fill: #fff;
 }
 
 /*!
