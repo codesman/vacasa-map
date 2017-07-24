@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 // Country Data
 Route::get('/countries', 'CountriesController@index');
+
+Route::get('/maps/{map}', 'MapController@show');
