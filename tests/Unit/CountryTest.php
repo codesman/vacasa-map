@@ -7,10 +7,12 @@ use Tests\TestCase;
 
 class CountryTest extends TestCase
 {
-    protected $country;
+    protected $country; // We need a country to test!
 
     /**
      * Set up
+     * 
+     * @return void
      */
     public function setUp()
     {
@@ -30,7 +32,7 @@ class CountryTest extends TestCase
     public function testScopeRef()
     {
         $this->assertTrue(
-            method_exists(Country::class, 'scopeRef'),
+            method_exists($this->country, 'scopeRef'),
             'Country does not have the scopeRef method'
         );
     }

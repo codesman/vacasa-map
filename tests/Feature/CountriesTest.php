@@ -3,9 +3,6 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class CountriesTest extends TestCase
 {
@@ -14,10 +11,9 @@ class CountriesTest extends TestCase
      * 
      * @return void
      */
-    public function testCountriesEndpointFor200()
+    public function testCountriesEndpointStatusIs200()
     {
         $response = $this->get('/countries');
-
         $response->assertStatus(200);
     }
 }
