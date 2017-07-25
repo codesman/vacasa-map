@@ -102,6 +102,11 @@
   fill: #fff;
 }
 
+.location-map a text.separate,
+.location-map a tspan.separate {
+  fill: #538d9c;
+}
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.

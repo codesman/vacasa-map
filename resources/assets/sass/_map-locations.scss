@@ -9,6 +9,7 @@ $map-path-stroke-color: #b0d2df;
 $map-path-stroke-width: .5;
 
 $text-fill-color: #a2b7b8;
+$separate-text-fill-color: #538d9c;
 
 $a-path-fill-color: #538d9c;
 $a-path-stroke-color: #c2e8fb;
@@ -115,5 +116,9 @@ $map-transition-time: .2s;
   a text, a tspan {
     cursor: pointer;
     fill: $snow-white;
+  }
+
+  a text.separate, a tspan.separate {
+    fill: $separate-text-fill-color;
   }
 }
