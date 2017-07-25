@@ -42340,18 +42340,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            countries: []
+            countries: [],
+            active: ''
         };
     },
 
     methods: {
-        loadMap: function loadMap(map) {
-            Event.$emit('load-map', map);
+        setActive: function setActive(ref) {
+            this.active = ref;
+        },
+        isActive: function isActive(ref) {
+            return this.active === ref;
+        },
+        loadMap: function loadMap(ref) {
+            Event.$emit('load-map', ref);
+            this.setActive(ref);
         },
         loadCountries: function loadCountries() {
             var vm = this;
             axios.get('/countries').then(function (response) {
                 vm.countries = response.data;
+                vm.active = vm.countries[0].ref;
             }).catch(function (error) {
                 console.log(error);
             });
@@ -42369,6 +42378,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('nav', [_c('ul', _vm._l((_vm.countries), function(country) {
     return _c('li', [_c('a', {
+      class: {
+        active: _vm.isActive(country.ref)
+      },
       attrs: {
         "href": ""
       },
