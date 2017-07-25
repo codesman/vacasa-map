@@ -36,6 +36,7 @@ $map-transition-time: .2s;
   }
 
   > div:first-child {
+    max-width: 975px;
     width: 100%;
   }
 
@@ -70,11 +71,12 @@ $map-transition-time: .2s;
 
       a {
         display: block;
-        font-size: $content-font-size;
-        padding: 1em;
+        font-size: 1.25em;
+        padding: .75em 1em;
 
         &.active {
           background-color: $snow-white;
+          color: $vacasa-orange;
         }
       }
     }
